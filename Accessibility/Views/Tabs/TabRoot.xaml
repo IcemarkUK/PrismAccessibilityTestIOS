@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dashboard="clr-namespace:Accessibility.Views.Dashboard;assembly=Accessibility"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+x:Class="Accessibility.Views.Tabs.TabRoot"
+    Title="Tab Page">
+    <TabbedPage.Children>
+        <NavigationPage
+            Title="Member"
+            AutomationId="Member">
+            <x:Arguments>
+                <dashboard:MemberDashboard />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage
+            Title="Info"
+            AutomationId="Info">
+            <x:Arguments>
+                <dashboard:Info />
+            </x:Arguments>
+        </NavigationPage>
+
+    </TabbedPage.Children>
+</TabbedPage>
